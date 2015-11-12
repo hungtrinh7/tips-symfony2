@@ -2,9 +2,10 @@
 
 A collection of Symfony2 tips.
 
-1. [Dump Symfony data entity](#dump-symfony-data-entity)
+1. [Dump entity data](#dump-entity-data)
+2. [Flash message](#flash-message)
 
-### Dump Symfony data entity:
+### Dump entity data:
 
 ```php
 echo '<pre>'; 
@@ -13,3 +14,22 @@ echo '</pre>';
 ```
 
 Very useful when you want to `debug` your code.
+
+### Flash message:
+
+```php
+// in Controller
+$this->addFlash(
+    'notice',
+    'message content'
+);
+```
+
+``` twig
+{# in Twig #}
+{% for flashMessage in app.session.flashbag.get('notice') %}
+    <div class="flash-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+```
