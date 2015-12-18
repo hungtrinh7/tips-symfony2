@@ -13,6 +13,18 @@ echo '<pre>';
 echo '</pre>';
 ```
 
+OR
+
+```php
+// PHP
+dump($user);  // will be display in the profiler bar
+```
+
+```twig
+// twig
+{{ dump($user) }} 
+```
+
 Very useful when you want to `debug` your code.
 
 ### Flash message:
