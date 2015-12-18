@@ -21,7 +21,7 @@ dump($user);  // will be display in the profiler bar
 ```
 
 ```twig
-// twig
+{# in Twig #}
 {{ dump($user) }} 
 ```
 
